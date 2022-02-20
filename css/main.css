@@ -1,5 +1,31 @@
+/* COMMON */
 body{
     font-family: 'Nanum Gothic', sans-serif;
-    color:red;
-    font-size:100px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #333;
+}
+img {
+    display:block;
+}
+
+/* HEADER */
+header{
+    background-color: royalblue;
+}
+header .inner{
+    position:relative;
+    margin: 0 auto;
+    width: 1100px;
+    height: 120px;
+    background-color: orange;
+}
+header .logo{
+    height: 75px;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left: 0;
+    margin: auto 0;
 }

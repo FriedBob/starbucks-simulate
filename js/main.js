@@ -51,3 +51,13 @@ window.addEventListener('scroll', _.throttle(function(){
         });
     }
 }, 300));
+
+/*--- 메인화면 이미지 페이드인 --*/
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+fadeEls.forEach(function (fadeEl,index) {
+    gsap.to(fadeEl, 1, {
+        delay: (index+1)*.7,  // 몇초마다 실행될것인지
+        opacity: 1,
+        
+    });
+});

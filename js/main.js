@@ -1,6 +1,7 @@
 /*--- USED OPEN-SOURCE LIBRARY ---*/
 // Lodash : 함수의 ms단위의 연속실행 제약
 // GSAP : js의 애니메이션 처리
+// SWIPER : css와 js의 슬라이드 애니메이션 처리
 
 
 const searchEl = document.querySelector('.search');
@@ -60,4 +61,11 @@ fadeEls.forEach(function (fadeEl,index) {
         opacity: 1,
         
     });
+});
+
+/*--- SWIPER ---*/
+new Swiper('.notice-line .swiper-container', {
+    direction: 'vertical',
+    autoplay: true,
+    loop: true
 });

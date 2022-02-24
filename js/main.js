@@ -2,6 +2,7 @@
 // Lodash : 함수의 ms단위의 연속실행 제약
 // GSAP : js의 애니메이션 처리
 // SWIPER : css와 js의 슬라이드 애니메이션 처리
+// Iframe Player API : youtube 동영상 첨부 (youtube.js)
 
 
 const searchEl = document.querySelector('.search');

@@ -3,7 +3,7 @@
 // GSAP : js의 애니메이션 처리
 // SWIPER : css와 js의 슬라이드 애니메이션 처리
 // Iframe Player API : youtube 동영상 첨부 (youtube.js)
-// ScrollMagic
+// ScrollMagic : scroll 위치 인식/감시를 통한 애니메이션 트리거
 
 
 const searchEl = document.querySelector('.search');
@@ -87,6 +87,17 @@ new Swiper('.promotion .swiper-container',{
     navigation: {
         prevEl: '.promotion .swiper-prev',
         nextEl: '.promotion .swiper-next'
+    }
+});
+
+new Swiper('.awards .swiper-container',{
+    autoplay: true,
+    loop: true,
+    spaceBetween: 30,
+    slidesPerView: 5,
+    navigation: {
+        prevEl: '.awards .swiper-prev',
+        nextEl: '.awards .swiper-next'
     }
 });
 

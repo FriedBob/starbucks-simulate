@@ -148,3 +148,6 @@ spyEls.forEach(function(spyEl){
         .setClassToggle(spyEl, 'show')// 메소드 실행부 .setClassToggle(요소, add할클래스명)
         .addTo(new ScrollMagic.Controller());
 });
+
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear();

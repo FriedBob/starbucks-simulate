@@ -3,6 +3,7 @@
 // GSAP : js의 애니메이션 처리
 // SWIPER : css와 js의 슬라이드 애니메이션 처리
 // Iframe Player API : youtube 동영상 첨부 (youtube.js)
+// ScrollMagic
 
 
 const searchEl = document.querySelector('.search');
@@ -123,3 +124,16 @@ function floatingObject(selector, delay, size) {
 floatingObject('.floating1', 1, 15);
 floatingObject('.floating2', .5, 15);
 floatingObject('.floating3', 1.5, 20);
+
+
+const spyEls = document.querySelectorAll('section.scroll-spy');
+spyEls.forEach(function(spyEl){
+    // ScrollMagic 라이브러리로 해당 오브젝트가 화면에 보이는지 감지
+    new ScrollMagic
+        .Scene({
+            triggerElement: spyEl,   // 보여짐 여부를 감시할 요소를 지정
+            triggerHook: .8          // 뷰포트를 0~1이라 했을때 0.8부분에서 트리거
+        })
+        .setClassToggle(spyEl, 'show')// 메소드 실행부 .setClassToggle(요소, add할클래스명)
+        .addTo(new ScrollMagic.Controller());
+});

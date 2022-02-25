@@ -45,6 +45,10 @@ window.addEventListener('scroll', _.throttle(function(){
             opacity: 0,
             display: 'none'
         });
+        // 페이지 상단이동 버튼 보이기
+        gsap.to('#to-top',.2 ,{
+            x: 0
+        });
     }else{
         // badge visible
         // badgeEl.style.display = 'block';
@@ -52,8 +56,19 @@ window.addEventListener('scroll', _.throttle(function(){
             opacity: 1,
             display: 'block'
         });
+        // 페이지 상단이동 버튼 숨기기
+        gsap.to(toTopEl, .2 ,{          // toTopEl(요소) 자리에 선택자를 넣어도 됨
+            x: 100
+        });
     }
 }, 300));
+
+const toTopEl = document.querySelector('#to-top');
+toTopEl.addEventListener('click',function(){
+    gsap.to(window,.7 ,{
+        scrollTo: 0     // 화면의 위치를 0px로 옮긴다
+    })
+})
 
 /*--- 메인화면 이미지 페이드인 --*/
 const fadeEls = document.querySelectorAll('.visual .fade-in');

@@ -6,23 +6,7 @@
 // ScrollMagic : scroll 위치 인식/감시를 통한 애니메이션 트리거
 
 
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
 
-searchEl.addEventListener('click', function(){
-    // search 검색요소 선택시 동작
-    searchInputEl.focus();
-});
-
-searchInputEl.addEventListener('focus', function(){
-    searchEl.classList.add('focused');
-    searchInputEl.setAttribute('placeholder','통합검색');
-});
-
-searchInputEl.addEventListener('blur', function(){
-    searchEl.classList.remove('focused');
-    searchInputEl.setAttribute('placeholder','');
-});
 
 /*--- badge scroll control ---*/
 const badgeEl = document.querySelector('header .badges');
@@ -164,5 +148,3 @@ spyEls.forEach(function(spyEl){
         .addTo(new ScrollMagic.Controller());
 });
 
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear();
